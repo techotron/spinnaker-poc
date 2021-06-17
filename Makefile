@@ -65,6 +65,6 @@ fargate-cluster-create:
 
 fargate-cluster-up: fargate-cluster-create-ter fargate-cluster-attach-ter fargate-cluster-create-ecscli-config fargate-cluster-create-ecscli-profile
 
-
+fargate-cluster-down: fargate-cluster-detach-ter fargate-cluster-delete-ter
 
 dev: fargate-cluster-create-ter fargate-cluster-attach-ter fargate-cluster-create-ecscli-config fargate-cluster-create-ecscli-profile
