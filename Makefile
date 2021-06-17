@@ -52,12 +52,14 @@ fargate-cluster-create-ecscli-config:
 		--config-name ${CLUSTER_CONFIG} \
 		--region ${REGION}
 
+# NEED TO USE IAM ROLES: https://github.com/aws/amazon-ecs-cli/issues/369
 fargate-cluster-create-ecscli-profile:
 	ecs-cli configure profile \
 		--access-key ${AWS_ACCESS_KEY_ID} \
 		--secret-key ${AWS_SECRET_ACCESS_KEY} \
 		--session-token ${AWS_SESSION_TOKEN} \
 		--profile-name ${ECS_CLI_PROFILE_NAME}
+
 
 fargate-cluster-create:
 	ecs-cli up --cluster-config ${CLUSTER_CONFIG} \
